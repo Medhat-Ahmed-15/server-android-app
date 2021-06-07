@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_server"
+    android:layout_width="match_parent"
+    android:background="@drawable/gardient_background1"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/start_server"
+        android:layout_width="wrap_content"
+        android:layout_height="77dp"
+        android:src="@drawable/power_on"
+        android:layout_alignParentTop="true"
+        android:text="Start Server" />
+
+    <TextView
+        android:id="@+id/edMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/start_server"
+        android:fontFamily="@font/libre_baskerville_bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="Messages from Server" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/post_data"
+        android:layout_below="@+id/edMessage">
+
+        <LinearLayout
+            android:id="@+id/msgList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/post_data"
+        android:layout_width="wrap_content"
+        android:translationX="140dp"
+        android:layout_height="77dp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/post"
+        android:text="Send Message to Client"
+        android:textColor="@android:color/white" />
+
+
+    <ImageView
+        android:id="@+id/post_score"
+        android:translationX="-140dp"
+        android:layout_width="wrap_content"
+        android:layout_height="77dp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/send_score"
+        android:text="Send Message to Client"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>
